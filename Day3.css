@@ -88,9 +88,10 @@
 } */
 
 span{
+    display: block;
     position: absolute;
     background-color: #6300ee1a;
-    transform: translate(-50%, -50%);
+    transform: translate3D(-50%, -50%);
     pointer-events: none;
     border-radius: 50%;
     animation: animate 1s ease-out infinite;
