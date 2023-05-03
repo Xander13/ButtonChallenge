@@ -1,0 +1,123 @@
+* {
+    font-family: 'Anton', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.canvas {
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+}
+
+.button {
+    margin: auto;
+    position: relative;
+    top: calc((100vh / 2));
+    background-color: #fff;
+    width: fit-content;
+    block-size: fit-content;
+    justify-content: center;
+    display: flex;
+    border-radius: 12px;
+    color: #6200ee;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    overflow: hidden;
+    user-select: none;
+    border: 1px solid rgba(100, 100, 100, 0.416);
+}
+
+/* .button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.8s;
+} */
+
+.button:hover {
+    background: #6300ee1a;
+}
+
+/* .hoverbox{
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    top: 120px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    animation: slideUp 1s ease infinite;
+} */
+
+.button:hover {
+    cursor: pointer;
+}
+
+/* .button:active {
+    background-color: white;
+} */
+
+.button h1 {
+    z-index: 2;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #6300ee1a;
+    border-radius: 100rem;
+    width: 0px;
+    height: 0px;
+}
+
+.button:active .circle{
+    animation: cricleExpand 1s cubic-bezier(.17,.67,.83,.67);
+} */
+
+span{
+    position: absolute;
+    background-color: #6300ee1a;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: animate 1s ease-out infinite;
+}
+
+@keyframes animate{
+    0%{
+        width: 0px;
+        height: 0px;
+    }
+
+    100%{
+        width: 900px;
+        height: 900px;
+    }
+}
+
+/* @keyframes cricleExpand {
+    0% {
+        border-radius: 50%;
+        width: 0px;
+        height: 0px;
+    }
+
+    100% {
+        border-radius: 50%;
+        width: 500px;
+        height: 500px;
+    }
+} */
