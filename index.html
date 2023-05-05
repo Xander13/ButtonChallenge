@@ -8,16 +8,74 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Day3.css">
+    <link rel="stylesheet" href="Day5.css">
 </head>
 
 <body>
     <div class="canvas">
-        <div class="button">
+        <!-- <div class="button">
             <h1>Today's button</h1>
-            <!-- <div class="circle"></div> -->
+        </div> -->
+        <!-- <div id="text">
+            <div class="line">
+                <p class="word">The</p>
+                <p class="word">Example</p>
+            </div>
+            <div class="line">
+                <p class="word">Mid Design</p>
+                <p class="word">&</p>
+            </div>
+            
+            <div class="line">
+                <a href="#" id="channel-link" class="word fancy">Today &nbsp; Button</a>
+            </div>
+            <div class="line">
+                <p class="word fancy">Code / Designs</p>
+            </div>
+        </div> -->
+
+        <div id="text">    
+            <div class="line">
+                <p class="word fancy">T</p>
+                <p class="word fancy">o</p>
+                <p class="word fancy">d</p>
+                <p class="word fancy">a</p>
+                <p class="word fancy">y</p>
+                <p>&nbsp;</p>
+                <p class="word fancy">b</p>
+                <p class="word fancy">u</p>
+                <p class="word fancy">t</p>
+                <p class="word fancy">t</p>
+                <p class="word fancy">o</p>
+                <p class="word fancy">n</p>
+            </div>
+            <div class="line">
+                <p class="word">Code * Designs</p>
+            </div>
         </div>
+        
     </div>
+
+    <!--Day 5 code-->
+    <!-- <script>
+        const enchance = id =>{
+            const element = document.getElementById(id),
+            text = element.innerText.split("");
+            element.innerText = "";
+
+            text.forEach(letter =>{
+                const span = document.createElement("span")
+
+                span.className = "letter";
+
+                span.innerText = letter;
+
+                element.appendChild(span);
+            })
+        }
+
+        enchance("channel-link");
+    </script> -->
 
     <!--Day 4 code-->
     <!-- <div class="canvas">
@@ -69,7 +127,7 @@
     </div> -->
 
     <!--Day 3 Code-->
-    <script>
+    <!-- <script>
         const buttons = document.querySelectorAll('.button');
         buttons.forEach(btn => {
             btn.addEventListener('click', function(e){
@@ -86,7 +144,7 @@
                 }, 1000);
             });
         });
-    </script>
+    </script> -->
 
     <!--Day 4-->
     <!-- <script>
@@ -98,6 +156,8 @@
     list.forEach((item) => 
     item.addEventListener('click', activeLink));
     </script> -->
+
+     <!--Day 5-->
 </body>
 
 </html>
