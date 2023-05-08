@@ -8,53 +8,69 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Day5.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="Day6.css">
 </head>
 
 <body>
     <div class="canvas">
-        <!-- <div class="button">
-            <h1>Today's button</h1>
-        </div> -->
-        <!-- <div id="text">
-            <div class="line">
-                <p class="word">The</p>
-                <p class="word">Example</p>
-            </div>
-            <div class="line">
-                <p class="word">Mid Design</p>
-                <p class="word">&</p>
-            </div>
-            
-            <div class="line">
-                <a href="#" id="channel-link" class="word fancy">Today &nbsp; Button</a>
-            </div>
-            <div class="line">
-                <p class="word fancy">Code / Designs</p>
-            </div>
-        </div> -->
+        <div class="button" id="myDiv">
+            <div id="circle" class="slider">
 
-        <div id="text">    
-            <div class="line">
-                <p class="word fancy">T</p>
-                <p class="word fancy">o</p>
-                <p class="word fancy">d</p>
-                <p class="word fancy">a</p>
-                <p class="word fancy">y</p>
-                <p>&nbsp;</p>
-                <p class="word fancy">b</p>
-                <p class="word fancy">u</p>
-                <p class="word fancy">t</p>
-                <p class="word fancy">t</p>
-                <p class="word fancy">o</p>
-                <p class="word fancy">n</p>
             </div>
-            <div class="line">
-                <p class="word">Code * Designs</p>
+            <div class="indicator" id="indicator">
+                <div class="numStats">0&#x2103;</div>
+                <img class="morph" src="Pin.svg" width="100%">
             </div>
         </div>
-        
     </div>
+
+    <script>
+        // Get the elements
+        const circle = document.getElementById("circle");
+        const myDiv = document.getElementById("myDiv");
+        const indicator = document.getElementById("indicator");
+
+        // Set initial variables
+        let isDragging = false;
+        let offset = [0, 0];
+
+        // Add the event listeners for dragging
+        circle.addEventListener("mousedown", dragStart);
+        circle.addEventListener("mouseup", dragEnd);
+        myDiv.addEventListener("mousemove", drag);
+
+        // Drag functions
+        function dragStart(e) {
+            isDragging = true;
+            offset = [
+                circle.offsetLeft - e.clientX,
+                circle.offsetTop - e.clientY
+            ];
+        }
+
+        function dragEnd(e) {
+            isDragging = false;
+        }
+
+        function drag(e) {
+            if (isDragging) {
+                // Calculate the new position of the circle div
+                let newLeft = e.clientX + offset[0];
+                if (newLeft < 0) {
+                    newLeft = 0;
+                } else if (newLeft > myDiv.offsetWidth - circle.offsetWidth) {
+                    newLeft = myDiv.offsetWidth - circle.offsetWidth;
+                }
+                circle.style.left = newLeft + "px";
+
+                // Calculate the new position of the indicator
+                let indicatorLeft = circle.offsetLeft + circle.offsetWidth / 2 - indicator.offsetWidth / 2;
+                indicator.style.left = indicatorLeft + "px";
+            }
+        }
+    </script>
 
     <!--Day 5 code-->
     <!-- <script>
@@ -157,7 +173,7 @@
     item.addEventListener('click', activeLink));
     </script> -->
 
-     <!--Day 5-->
+    <!--Day 5-->
 </body>
 
 </html>
