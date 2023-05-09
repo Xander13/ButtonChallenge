@@ -1,0 +1,70 @@
+* {
+    font-family: 'Anton', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.canvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(245, 245, 245);
+    background-image: url("https://media.wired.com/photos/5d8aab8bef84070009028d31/master/w_2560%2Cc_limit/Plant-Music-1162975190.jpg");
+    background-size: cover;
+}
+
+.button {
+    margin: auto;
+    position: absolute;
+    border-radius: 100rem;
+    height: 100px;
+    width: 320px;
+    height: 64px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.5s ease;
+}
+
+.bg{
+    background-image: url("https://media.wired.com/photos/5d8aab8bef84070009028d31/master/w_2560%2Cc_limit/Plant-Music-1162975190.jpg");
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ease;
+}
+
+.bg::before{
+    width: 650px;
+    height: 400px;
+    content: "";
+    top: -25px;
+    left: -25px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-image: inherit;
+    box-shadow: inset 0 0 0 500px rgba(255, 255, 255, 0.251);
+    filter: blur(10px);
+}
+
+.button h1 {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    margin: auto;
+    font-weight: 400;
+}
