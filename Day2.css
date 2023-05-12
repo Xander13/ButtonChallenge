@@ -13,9 +13,7 @@
 
 .button {
     position: relative;
-    background-color: #d1d7e2ff;
-    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.242), 
-    10px 10px 15px rgba(70, 70, 70, 0.242);
+    background-color: rgb(229, 69, 69);
     width: fit-content;
     block-size: fit-content;
     justify-content: center;
@@ -27,7 +25,6 @@
     padding-left: 48px;
     padding-right: 48px;
     overflow: hidden;
-    border: 8px solid #d1d7e2ff;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
@@ -36,10 +33,7 @@
 
 .button:hover {
     cursor: pointer;
-    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.242), 
-    10px 10px 15px rgba(70, 70, 70, 0.242), 
-    inset -10px -10px 15px rgba(255, 255, 255, 0.242),
-    inset 10px 10px 15px rgba(70, 70, 70, 0.242);
+    
     transition: 1s ease;
 }
 
